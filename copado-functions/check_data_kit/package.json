@@ -1,0 +1,7 @@
+{
+  "name": "check-data-kit",
+  "version": "1.0.0",
+  "dependencies": {
+    "jsforce": "^1.11.1"
+  }
+}
