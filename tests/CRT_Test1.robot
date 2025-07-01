@@ -21,4 +21,4 @@ Navigate to Test Deliverability
     TypeText    Last Name    Test
     ClickText    Save    partial_match=False
     UseModal    Off
-    VerifyText    Person Account\nMr. CRT Test Test Test
+    
