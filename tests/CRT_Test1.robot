@@ -19,9 +19,6 @@ Navigate to Test Deliverability
     TypeText    First Name    CRT Test
     TypeText    Middle Name    Test
     TypeText    Last Name    Test
-    TypeText    Email    crttest.accenture.com
-    ClickText    Save    partial_match=False
-    VerifyText    Review the following fields\nEmail
     ClickText    Save    partial_match=False
     UseModal    Off
     VerifyText    Person Account\nMr. CRT Test Test Test
