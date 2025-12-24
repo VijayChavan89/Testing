@@ -4,21 +4,27 @@ Library           QWeb
 Library           QForce
 Library           String
 Suite Setup       Open Browser        about:blank    chrome
+#Suite Setup    Open Browser And Login
+Suite Teardown    Close All Browsers
+
 
 *** Test Cases ***
-Navigate to Test Deliverability
-    Login To Org
+
+Account record create
+    [Documentation]    Account record create
+
     LaunchApp    Accounts
-    ClickText    Select a List View: Accounts
-    ClickText    All Accounts
     ClickText    New
     UseModal    On
-    ClickText    Person Account    anchor=Select a record type
+    ClickText    Internal Contacts
+    VerifyText    Internal Contacts
+    ClickText    Internal Contacts
     ClickText    Next
-    PickList    Salutation    Mr.
-    TypeText    First Name    CRT Test
-    TypeText    Middle Name    Test
-    TypeText    Last Name    Test
+    TypeText    *Account Name    CRT EMPTY JOB TEST
+    PickList    Type    Customer
+    TypeText    Phone    1234567890
     ClickText    Save    partial_match=False
     UseModal    Off
+    VerifyField    Account Name    CRT EMPTY JOB TEST    partial_match=True
     
+
