@@ -1,0 +1,39 @@
+name: Feature Request
+description: Suggest an idea to improve the Agentforce for CRT asset.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature! Please complete the form below.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What problem are you trying to solve?
+      description: Explain the context or motivation behind the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe how you think this feature should work.
+      placeholder: "I’d like to have a toggle switch that enables dark mode..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context or screenshots
+      description: Anything else that might be helpful?
