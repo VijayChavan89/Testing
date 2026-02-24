@@ -23,7 +23,7 @@ Login To Org
 Navigate to Test Deliverability
     Login To Org   
     Sleep    5s
-    ClickText    Setup        timeout=20s
+    ClickText    Setup
     ClickText    Opens in a new tab
     SwitchWindow    NEW
     ClickText    Expand    anchor=Email
