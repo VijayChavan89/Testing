@@ -20,7 +20,9 @@ Login To Org
     ClickText   Log In to Sandbox
 
 *** Test Cases ***
+
 Navigate to Test Deliverability
+    [Documentation] trying to create account
     Login To Org   
     Sleep    5s
    # ClickText    Setup
