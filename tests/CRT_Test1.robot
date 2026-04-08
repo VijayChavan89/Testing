@@ -23,6 +23,8 @@ Login To Org
 
 Navigate to Test Deliverability
     [Documentation] trying to create account
+    [tags]    test
+
     Login To Org   
     Sleep    5s
    # ClickText    Setup
