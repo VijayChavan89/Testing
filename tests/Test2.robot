@@ -18,11 +18,7 @@ ${totp_secret}    6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
 *** Keywords ***
 
 
-Login To Salesforce With MFA
-    GoTo        ${login_url}
-    TypeText    Username    ${username}
-    TypeText    Password    ${password}
-    ClickText   Log In to Sandbox
+
 
 Login To Salesforce With MFA
     ...    ${login_url}
