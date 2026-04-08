@@ -22,7 +22,7 @@ Login To Org
 *** Test Cases ***
 
 Navigate to Test Deliverability
-    [Documentation] trying to create account
+    [Documentation]     trying to create account
     [tags]    test
 
     Login To Org   
