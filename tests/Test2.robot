@@ -28,10 +28,9 @@ ${SF_TOTP_SECRET}      6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
 *** Test Cases ***
 
 Navigate to Test Deliverability
-    [Documentation] trying to create account
+    [Documentation]     trying to create account
     [tags]    test
 
-    Login To Salesforce With MFA
     Login To Salesforce With MFA
     ...    ${login_url}
     ...    ${username}
