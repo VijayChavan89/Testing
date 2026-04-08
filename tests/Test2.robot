@@ -35,7 +35,7 @@ Navigate to Test Deliverability
     ...    ${login_url}
     ...    ${username}
     ...    ${password}
-    ...    ${totp_secret}
+    ...    ${SF_TOTP_SECRET}
 
     Sleep    5s
 
