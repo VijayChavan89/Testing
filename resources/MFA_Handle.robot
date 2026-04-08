@@ -3,17 +3,18 @@ Library           QWeb
 Library           Collections
 Library           OperatingSystem
 Library           String
-Resource          ../resources/login_macro.robot
+Resource          ../resources/MFA_Handle.robot
 
 *** Variables ***
 # Salesforce credentials (will use CRT variables)
-${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
-${SF_USERNAME}         saswata.jana@accenture.com.acnsalesforce.staging
-${SF_PASSWORD}         JawlKhaao@2026
-${SF_TOTP_SECRET}      7KTRP3I3Q6P2C65MXMVL2WUJ3GDR2ZKY
+#${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
+#${SF_USERNAME}         saswata.jana@accenture.com.acnsalesforce.staging
+#${SF_PASSWORD}         JawlKhaao@2026
+#${SF_TOTP_SECRET}      7KTRP3I3Q6P2C65MXMVL2WUJ3GDR2ZKY
+${SF_TOTP_SECRET}        6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
 
 # CSV file path
-${CSV_FILE}            ${CURDIR}/../Data/ip_addresses.csv
+#${CSV_FILE}            ${CURDIR}/../Data/ip_addresses.csv
 
 *** Test Cases ***
 Add Network Access IPs from CSV File
