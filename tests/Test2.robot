@@ -24,6 +24,11 @@ Login To Salesforce With MFA
     TypeText    Password    ${password}
     ClickText   Log In to Sandbox
 
+Login To Salesforce With MFA
+    ...    ${login_url}
+    ...    ${username}
+    ...    ${password}
+    ...    ${totp_secret}
 
 
 *** Test Cases ***
