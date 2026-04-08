@@ -32,7 +32,10 @@ Login To Salesforce With MFA
 
 
 *** Test Cases ***
+
 Navigate to Test Deliverability
+    [Documentation] trying to create account
+    [tags]    test
 
     Login To Salesforce With MFA
     Sleep    5s
