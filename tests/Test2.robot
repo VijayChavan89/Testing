@@ -11,8 +11,6 @@ Suite Setup     Open Browser    about:blank    chrome
 
 
 *** Variables ***
-
-*** Variables ***
 # Salesforce credentials (will use CRT variables)
 ${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
 ${SF_USERNAME}         vijay.c.chavan@accenture.com.acnsalesforce.staging
@@ -54,3 +52,5 @@ Navigate to Test Deliverability
     TypeText    Last Name    CRT Test
     ClickText    Save    partial_match=False
     UseModal    Off
+
+
