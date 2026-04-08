@@ -11,7 +11,9 @@ ${BROWSER}        chrome
 ${login_url}      %{login_url}
 ${username}       %{username}
 ${password}       %{password}
-${totp_secret}    %{totp_secret}   # ✅ ADD THIS (best practice)
+#${totp_secret}    %{totp_secret}   # ✅ ADD THIS (best practice)
+${totp_secret}    6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
+
 
 *** Keywords ***
 
