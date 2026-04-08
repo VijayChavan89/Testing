@@ -21,7 +21,7 @@ Login To Org
 
 *** Test Cases ***
 Navigate to Test Deliverability
-   # Login To Org   
+    Login To Org   
    # Sleep    5s
    # ClickText    Setup
    # ClickText    Opens in a new tab
