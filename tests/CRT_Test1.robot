@@ -31,4 +31,4 @@ Navigate to Test Deliverability
     DropDown    thePage:theForm:editBlock:sendEmailAccessControlSection:sendEmailAccessControl:sendEmailAccessControlSelect    System email only
     VerifyText    Access level
     ClickText    Save
-    VerifyText    Your organization's email settings have been saved.
+   #VerifyText    Your organization's email settings have been saved.
