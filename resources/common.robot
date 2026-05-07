@@ -81,7 +81,7 @@ Login As
 
 
 #Fill MFA
-    [Documentation]      Gets the MFA OTP code and fills the verification dialog (if needed)
+    #[Documentation]      Gets the MFA OTP code and fills the verification dialog (if needed)
    # [Arguments]          ${sf_username}=${username}    ${mfa_secret}=${secret}  ${sf_instance_url}=${login_url}
    # ${mfa_code}=         GetOTP    ${sf_username}   ${mfa_secret}   ${login_url}  
     #TypeSecret           Verification Code       ${mfa_code}      
