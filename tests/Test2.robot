@@ -16,18 +16,12 @@ ${username}      %{username}
 ${password}      %{password}
 ${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
 
-*** Keywords ***
-Login To Org
-    GoTo        ${login_url}
-    TypeText    Username    ${username}
-    TypeText    Password    ${password}
-    ClickText   Log In to Sandbox
 
 
 
 
 
-*** Variables ***
+#*** Variables ***
 # Salesforce credentials (will use CRT variables)
 #${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
 #${SF_USERNAME}         vijay.c.chavan@accenture.com.acnsalesforce.staging
@@ -48,8 +42,6 @@ Create a Person Account
 
     [Documentation]     trying to create account
     [tags]    test
-
-    GoTo      Login To Org
 
     Login To Salesforce With MFA
     ...    ${login_url}
