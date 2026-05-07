@@ -3,7 +3,7 @@
 Library           Collections
 Library           OperatingSystem
 Resource        ../resources/common.robot
-Resource        ../resources/MFA_Handle.robot   # ✅ ADD THIS
+#Resource        ../resources/MFA_Handle.robot   # ✅ ADD THIS
 Library         QWeb
 Library         QForce
 Library         String
