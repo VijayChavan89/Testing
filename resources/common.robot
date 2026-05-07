@@ -237,16 +237,3 @@ Get Last Message Index
 
 
 
-*** Variables ***
-${BROWSER}       chrome
-${login_url}     %{login_url}
-${username}      %{username}
-${password}      %{password}
-
-
-*** Keywords ***
-Login To Org
-    GoTo        ${login_url}
-    TypeText    Username    ${username}
-    TypeText    Password    ${password}
-    ClickText   Log In to Sandbox
