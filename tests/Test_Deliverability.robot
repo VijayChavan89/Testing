@@ -1,46 +1,34 @@
 *** Settings ***
-Library    QWeb
-Library    QForce
-Library    CopadoAI
-Library    String
 
+Library           Collections
+Library           OperatingSystem
+Resource        ../resources/common.robot
+Library         QWeb
+Library         QForce
+Library         String
+Suite Setup     Open Browser    about:blank    chrome
 
 *** Variables ***
-${BROWSER}               chrome
-${home_url}               https://accenture455--b2bdevai.sandbox.lightning.force.com/lightning/page/home
+${BROWSER}       chrome
+${login_url}     %{login_url}
+${username}      %{username}
+${password}      %{password}
+${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
 
 *** Keywords ***
-Setup Browser
-    Set Library Search Order            QWeb    QForce
-    Open Browser            about:blank         ${BROWSER}
-    SetConfig               LineBreak           ${EMPTY}
-    SetConfig               DefaultTimeout      20s         #Sometime salesforce is slow
+    Login To Salesforce With MFA
 
-End Suite
-    Close All Browser
-
-
-
-Login To Org
-    [Documentation]     Login to Salesforce Instance
-    GoTo                ${home_url}
-    TypeText            Username                    ${username}             delay=1
-    TypeText            Password                    $(password)
-    ClickText           Log In
 
 *** Test Cases ***
 Navigate to Test Deliverability
-    Login To Org
+    [Documentation]     Check Deliverability is checked or not 
+    [tags]    Check Deliverability
+
+
     ClickText    Setup
     Switch Window    NEW
     TypeText    Quick Find    Test Deliverability
     ClickText    Test Deliverability
     VerifyText    Test Deliverability
 
-*** Keywords ***
-Open Browser To Login Page
-    Open Browser    ${login_url}    ${BROWSER}
 
-Login To Org
-    # Use QForce's login utility or manually automate
-    Wait Until Page Contains    Lightning Experience
