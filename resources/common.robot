@@ -80,13 +80,35 @@ Login As
     ClickText             Login                       anchor=Freeze          partial_match=False    delay=1 
 
 
-Fill MFA
+#Fill MFA
     [Documentation]      Gets the MFA OTP code and fills the verification dialog (if needed)
-    [Arguments]          ${sf_username}=${username}    ${mfa_secret}=${secret}  ${sf_instance_url}=${login_url}
-    ${mfa_code}=         GetOTP    ${sf_username}   ${mfa_secret}   ${login_url}  
-    TypeSecret           Verification Code       ${mfa_code}      
-    ClickText            Verify 
-
+   # [Arguments]          ${sf_username}=${username}    ${mfa_secret}=${secret}  ${sf_instance_url}=${login_url}
+   # ${mfa_code}=         GetOTP    ${sf_username}   ${mfa_secret}   ${login_url}  
+    #TypeSecret           Verification Code       ${mfa_code}      
+    #ClickText            Verify 
+Login To Salesforce With MFA
+    [Documentation]    Reusable keyword to login to Salesforce with MFA
+    [Arguments]    ${url}    ${username}    ${password}    ${totp_secret}
+    
+    Log    🔐 Starting Salesforce login for: ${username}    console=True
+    
+    # Open Salesforce login page
+    Open Browser    ${url}    chrome
+    
+    # Enter credentials
+    TypeText      username    ${username}
+    TypeSecret    password    ${password}
+    ClickText     Log In
+    
+    # Handle MFA if required
+    ${mfa_visible}=    IsText    Verify Your Identity    timeout=10s
+    
+    IF    ${mfa_visible}
+        Log    🔑 MFA required - generating TOTP code    console=True
+        ${totp_code}=    Evaluate    pyotp.TOTP("${totp_secret}").now()
+        TypeText    code    ${totp_code}
+        ClickText   Verify
+    END
 
 Home
     [Documentation]       Example appstarte: Navigate to homepage, login if needed
