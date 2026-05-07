@@ -64,4 +64,7 @@ Create a Person Account
     ClickText    Save    partial_match=False
     UseModal    Off
 
+    LaunchApp    Accounts
+    VerifyText           Account Demo
+
 
