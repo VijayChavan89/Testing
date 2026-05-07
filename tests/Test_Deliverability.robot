@@ -15,20 +15,23 @@ ${username}      %{username}
 ${password}      %{password}
 ${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
 
-*** Keywords ***
-    Login To Salesforce With MFA
-
 
 *** Test Cases ***
 Navigate to Test Deliverability
     [Documentation]     Check Deliverability is checked or not 
     [tags]    Check Deliverability
 
+        Login To Salesforce With MFA
+    ...    ${login_url}
+    ...    ${username}
+    ...    ${password}
+    ...    ${SF_TOTP_SECRET}
 
-    ClickText    Setup
-    Switch Window    NEW
-    TypeText    Quick Find    Test Deliverability
-    ClickText    Test Deliverability
-    VerifyText    Test Deliverability
+    ClickText    Setup    anchor=Close Setup Menu
+    ClickText    Opens in a new tab
+    SwitchWindow    NEW
+    TypeText    Quick Find    email\n
+    ClickText    Deliverability
+    VerifyText                Jeniffer Lawrence
 
 
