@@ -9,13 +9,30 @@ Library         QForce
 Library         String
 Suite Setup     Open Browser    about:blank    chrome
 
+*** Variables ***
+${BROWSER}       chrome
+${login_url}     %{login_url}
+${username}      %{username}
+${password}      %{password}
+${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
+
+*** Keywords ***
+Login To Org
+    GoTo        ${login_url}
+    TypeText    Username    ${username}
+    TypeText    Password    ${password}
+    ClickText   Log In to Sandbox
+
+
+
+
 
 *** Variables ***
 # Salesforce credentials (will use CRT variables)
-${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
-${SF_USERNAME}         vijay.c.chavan@accenture.com.acnsalesforce.staging
-${SF_PASSWORD}         Qwerty@12345
-${SF_TOTP_SECRET}      6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
+#${SF_URL}              https://myaccenture--staging.sandbox.lightning.force.com
+#${SF_USERNAME}         vijay.c.chavan@accenture.com.acnsalesforce.staging
+#${SF_PASSWORD}         Qwerty@12345
+#${SF_TOTP_SECRET}      6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
 
 #${BROWSER}        chrome
 #${login_url}      %{login_url}
@@ -27,9 +44,12 @@ ${SF_TOTP_SECRET}      6DU4YC5LV5X2ZRJTYVRMDM6KJCSUNDH7
 
 *** Test Cases ***
 
-Navigate to Test Deliverability
+Create a Person Account
+
     [Documentation]     trying to create account
     [tags]    test
+
+    GoTo      Login To Org
 
     Login To Salesforce With MFA
     ...    ${login_url}
