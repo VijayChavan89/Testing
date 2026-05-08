@@ -14,7 +14,7 @@ ${BROWSER}       chrome
 ${login_url}     %{login_url}
 ${username}      %{username}
 ${password}      %{password}
-${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
+${totp_secret}    %{totp_secret} 
 
 
 
@@ -47,7 +47,7 @@ Create a Person Account
     ...    ${login_url}
     ...    ${username}
     ...    ${password}
-    ...    ${SF_TOTP_SECRET}
+    ...    ${totp_secret}
 
     Sleep    5s
 
