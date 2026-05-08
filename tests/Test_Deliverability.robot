@@ -13,7 +13,7 @@ ${BROWSER}       chrome
 ${login_url}     %{login_url}
 ${username}      %{username}
 ${password}      %{password}
-${SF_TOTP_SECRET}    %{SF_TOTP_SECRET}    
+${totp_secret}    %{totp_secret} 
 
 
 *** Test Cases ***
@@ -25,7 +25,7 @@ Navigate to Test Deliverability
     ...    ${login_url}
     ...    ${username}
     ...    ${password}
-    ...    ${SF_TOTP_SECRET}
+    ...    ${totp_secret}
 
     ClickText    Setup    anchor=Close Setup Menu
     ClickText    Opens in a new tab
