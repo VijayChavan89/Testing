@@ -79,7 +79,7 @@ Login As
     VerifyText            Freeze                      timeout=45                        # this is slow, needs longer timeout          
     ClickText             Login                       anchor=Freeze          partial_match=False    delay=1 
 
-Login To Salesforce
+
 #Fill MFA
     #[Documentation]      Gets the MFA OTP code and fills the verification dialog (if needed)
    # [Arguments]          ${sf_username}=${username}    ${mfa_secret}=${secret}  ${sf_instance_url}=${login_url}
