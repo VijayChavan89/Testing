@@ -16,6 +16,71 @@ ${password}      %{password}
 ${totp_secret}    %{totp_secret} 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *** Test Cases ***
 Navigate to Test Deliverability
     [Documentation]     Check Deliverability is checked or not 
