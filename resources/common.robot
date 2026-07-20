@@ -97,6 +97,7 @@ Login To Salesforce With MFA
     
     # Enter credentials
     TypeText      username    ${username}
+    ClickText     Log In to Sandbox
     TypeSecret    password    ${password}
     ClickText     Log In
     
